@@ -1,0 +1,48 @@
+<div>
+    <div id="content">
+        <header id="header" class="header">
+            <a class="logo" href="index.html"> Fastfood corporation</a> 
+            <a href="#!login" id="btnLogout" class="btnLogout">Выход</a>
+        </header>
+        <div id="container" class="container">
+
+                <h2 class="title">Добавить элемент</h2>
+                <form id="form" class="form">
+        
+                    <label for="form-name" class="form__title" > Название: </label>
+                    <input id="form-name" class="form__name" type = "text" name = "name" />
+
+                    <label for="form-adress" class="form__title" > Адресс: </label>
+                    <input id="form-adress" class="form__adress " type = "text" name = "adress" data-lat="" data-lng="" />
+
+                    <div id="map"></div>
+                    
+                    <label for="form-photo" class="form__title" > Фото: </label>
+                    <input id="form-photo" class="form__photo" type = "file" name = "photo" value="upload" data-url="" />
+                    <progress value="0" max="100" id="uploader" class="uk-progress">0%</progress>
+                
+                    <label for="form-description" class="form__title" > Описание: </label>
+                    <textarea name="description" class="form__description" id="form-description" ></textarea>
+        
+                   
+                    <div class="btn__edit-form">
+                        <a href="#!" id="btnSaveAdd" class="btnSaveAdd uk-button uk-button-primary btn__size_middle">Добавить</a>
+                        <a href="#!" id="btnCancel" class="btnCancel uk-button uk-button-default btn__size_middle">Отменить</a>
+                    </div>
+        
+                </form>
+
+        </div>
+
+<!-- modal window for msg "New" -->
+        <div id="modal-add" uk-modal="">
+                <div class="uk-modal-body">
+                    <button id="btnClose" class="uk-modal-close-outside" type="button" uk-close=""></button>
+                    <div class="uk-modal-body">
+                        Новая точка была добавлена!        
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+

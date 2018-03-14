@@ -1,0 +1,28 @@
+<div>
+        <div id="pagination__list">
+                <p>Общий рейтинг по точке: {{reting}}</p>
+                <ul  class="list feedback-edit">  
+                        {{#each list}}
+                        <li class="feedback-edit__item uk-comment" id="feedback-list"  data-keyChild="{{key}}">
+                                <div class="grid-row">        
+                                        <p class="feedback-edit__name uk-comment-title ">
+                                                <i class="fas fa-comment-alt"></i> {{value.name}}      
+                                        </p>
+                                        <button id="btnFeedbackDelete" class="btn btn__size_small">
+                                                <i class="feedback-delete far fa-trash-alt"></i>
+                                        </button>
+                                        <button id="btnFeedbackEdit" class="btn btn__size_small">
+                                                <i class="fas fa-edit"></i>
+                                        </button>
+                                </div>
+                                <p class="feedback-edit__reting uk-comment-meta">Рейтинг:
+                                        <snap class="feedback-edit__reting_value"> {{value.reting}}</snap>
+                                </p>
+                                <p class="feedback-edit__text uk-comment-body"> {{value.feedback}}</p>
+                        </li>
+                        {{/each}}
+                </ul>
+                <ul class="pagination"></ul>   
+        </div>
+</div>
+

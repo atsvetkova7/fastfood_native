@@ -1,0 +1,18 @@
+<form id="form-edit" class="form__edit">
+    <label for="form-name" class="form__title"> Название: </label>
+    <input id="form-name" class="form__name" type = "text" name = "name" value="{{value.name}}" />
+
+    <label for="form-adress" class="form__title" > Адресс: </label>
+    <input id="form-adress" class="form__adress" type = "text" name = "adress" value="{{value.adress}}" data-lat="{{value.geolocation.lat}}" data-lng="{{value.geolocation.lng}}" />
+    <div id="map"></div>
+    <label for="form-photo" class="form__title" > Фото: </label>
+    <input id="form-photo" class="form__photo" type = "file" name = "photo" value="upload" data-url="{{value.photo}}" />
+    <progress value="0" max="100" id="uploader" class="uk-progress">0%</progress>
+        
+    <label for="form-description" class="form__title" > Описание: </label>
+    <textarea id="form-description" class="form__description" name="description"  >{{value.description}}</textarea>
+    <div class="btn__edit-form">
+        <a href="#!" id="btnSaveEdit" class="uk-button uk-button-primary btn__size_middle">Сохранить</a>
+        <a href="#!" id="btnCancel" class="uk-button uk-button-default btn__size_middle">Назад</a>
+    </div>
+</form>

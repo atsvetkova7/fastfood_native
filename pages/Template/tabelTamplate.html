@@ -1,0 +1,26 @@
+<div>
+{{#each row}}
+    <tr data-key ="{{key}}" >
+      <td class="tabel__name">{{value.name}}</td>
+      <td class="tabel__adress" id="btnMap" >{{value.adress}}
+         <i class="fas fa-map-marker tabel__location"></i>
+      </td>
+      <td class="tabel__photo">
+        <img id="btnImg" uk-toggle="target: #modal-media-image" class="tabel__photo_img uk-preserve-width" alt="{{value.name}}" src = "{{value.photo}}" />
+      </td>
+      <td>{{value.description}}</td>
+      <td class="tabel__btn">
+        <a id="btnEdit" class="btn btn__table btn__edit" href="#!edit/:id">
+          <i class="fas fa-edit"></i> Редактировать
+        </a>
+        <a id="btnDelete" class="btn btn__table btn__delete">
+          <i class="fas fa-trash-alt"></i> Удалить
+        </a>
+        <a id="btnFeedback" class="btn btn__table btn__add-feedback" uk-toggle="target: #modal-feedback">
+          <i class="fas fa-comments"></i> Отзыв
+        </a>
+      </td>
+    </tr>
+{{/each}}
+</div>
+

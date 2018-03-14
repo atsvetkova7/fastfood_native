@@ -1,0 +1,56 @@
+<div>
+    <div id="content">
+        <header id="header" class="header">
+            <a class="logo" href="index.html"> Fastfood corporation</a> 
+            <a href="#!login" id="btnLogout" class="btnLogout">Выход</a>
+        </header>
+        <div id="container" class="container">
+            <h2 class="title" id="title-edit">Редактировать точку:</h2>
+                <div class="grid-row"> 
+                    <div class="column-2">
+                        <div id="form-edit-point-result"></div>
+                    </div>
+                    <div class="column-2">
+                        <div id="edit-comment-result"></div>
+                    </div>
+                </div> 
+        </div>
+
+        <!-- Modal window for edit form feedback -->
+        <div id="modal-edit-feedback" class="uk-flex-top" uk-modal="">
+            <div class="uk-modal-dialog uk-modal-body">
+                <button id="btnClose" class="uk-modal-close-outside" type="button" uk-close=""></button>
+                <div class="uk-modal-body">
+    
+                    <form id="form-feedback-edit">
+                        <label for="feedback-edit-name">Имя посетителя:</label>
+                        <input id="feedback-edit-name" class="uk-input" value="" type="text" /> 
+
+                        <label for="feedback-edit-comment">Комментарий:</label>
+                        <textarea id="feedback-edit-comment" class="uk-textarea"></textarea>
+
+                        <label for="feedback-edit-reting" >Рейтинг:</label>
+                        <select id="feedback-edit-reting" class="uk-select" name="reting" >
+    
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option> 
+                        </select>
+                        <button id="btnFeedbackSave" class="uk-button uk-button-primary uk-width-1-1">Сохранить</button>
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+<!-- Modal window show msg -->
+        <div id="modal-feedback-added" class="uk-flex-top" uk-modal="">
+                <div class="uk-modal-body">
+                    <button id="btnClose" class="uk-modal-close-outside" type="button" uk-close=""></button>
+                        Комментарий обновлен :)        
+                </div>
+        </div>
+    </div>
+
+</div>
